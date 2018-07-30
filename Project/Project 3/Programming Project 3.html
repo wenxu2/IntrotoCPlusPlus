@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p><!--StartFragment--></p>
+<h4>Programming Project #3</h4>
+<h3>Project Outcomes:</h3>
+<ol>
+<li>
+<p>Understand and use C++ functions for procedural abstraction and&nbsp;<a href="/d2l/common/dialogs/quickLink/quickLink.d2l?ou=1007126&amp;type=content&amp;rcode=UWF-1294704" target="_self">Functional Decomposition.</a></p>
+</li>
+<li>
+<p>Describe and use functions, parameters, and return values.</p>
+</li>
+<li>
+<p>Reinforce the use of iterators and selectors</p>
+</li>
+</ol>
+<h3>PreparatoryReadings:</h3>
+<p>The class text, Chapters&nbsp;4&nbsp;and&nbsp;5.</p>
+<h3>Project Requirements:</h3>
+<p>We will create a converter program for data quantities.&nbsp; We will give the user choices and will carry out the requested operation. The menushould appear as follows:</p>
+<blockquote>
+<p><span face="Courier New">Welcome to the super duper wizard converter!<br /></span></p>
+<p><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 1) KB --&gt; MB<br /></span></p>
+<p><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 2) KB --&gt; GB<br /></span></p>
+<p><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 3) MB --&gt; KB</span></p>
+<p>&nbsp; &nbsp; &nbsp;4) MB --&gt; GB</p>
+<p><span face="Courier New">&nbsp; &nbsp; &nbsp;5)&nbsp;</span>GB --&gt; MB</p>
+<p>&nbsp; &nbsp; &nbsp;6) GB --&gt; KB</p>
+<p>&nbsp; &nbsp; &nbsp;7) Exit</p>
+<p><span face="Courier New">Please enter an integer from 1 to 7 &gt;</span>&nbsp;</p>
+</blockquote>
+<h3>Notes:</h3>
+<p>1. You should create a choice() function that is called in a loop<span size="3">&nbsp;from the main() function that displays the choices.</span></p>
+<p>2. The menu from choice() will display the options as above and take user input until a valid number in the range is input.&nbsp; &nbsp;Upon detecting valid input it will return the integer chosen.</p>
+<p>3. When the choice() function returns proper input, code in the main() function will get the necessary input from the user and then call the function that calculates the result, and will display that result.</p>
+<p>4. *Important* - Note that our units change by 2^10, that is, 1024.&nbsp; 1GB = 1024MB, 1 MB = 1024 KB, and 1KB = 1024 bytes.&nbsp; 1KB is NOT 1000bytes, 1MB is NOT 1000KB, and 1GB is NOT 1000MB.</p>
+<p>5. Y<span face="Courier New">ou are to get the data quantity in terms of the original units and convert to the new units using the appropriate functions you coded.&nbsp; You should then display the new quantity as a number (with decimals), properly labeled.&nbsp;</span></p>
+<p><span size="3">6. We don't know how may times the user will want to run a conversion from the main.</span></p>
+<p><span size="3"></span></p>
+<p><strong><span size="3">Sample run:</span></strong></p>
+<p><!--StartFragment--></p>
+<p><em><span face="Courier New">Welcome to the super duper wizard converter!<br /></span></em></p>
+<p><em><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 1) KB --&gt; MB<br /></span></em></p>
+<p><em><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 2) KB --&gt; GB<br /></span></em></p>
+<p><em><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 3) MB --&gt; KB</span></em></p>
+<p><em>&nbsp; &nbsp; &nbsp;4) MB --&gt; GB</em></p>
+<p><em><span face="Courier New">&nbsp; &nbsp; &nbsp;5)&nbsp;</span>GB --&gt; MB</em></p>
+<p><em>&nbsp; &nbsp; &nbsp;6) GB --&gt; KB</em></p>
+<p><em>&nbsp; &nbsp; &nbsp;7) Exit</em></p>
+<p><em><span face="Courier New">Please enter an integer from 1 to 7 &gt;</span>&nbsp;2</em></p>
+<p></p>
+<p><em>Please input the quantity to be converted: 900</em></p>
+<p><em>900 KB is .0008583 GB.</em></p>
+<p><em>Do you wish to run again (y/n)?:&nbsp; y</em></p>
+<p><em><span face="Courier New">W <!--StartFragment--></span></em></p>
+<p><em><span face="Courier New">Welcome to the super duper wizard converter!<br /></span></em></p>
+<p><em><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 1) KB --&gt; MB<br /></span></em></p>
+<p><em><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 2) KB --&gt; GB<br /></span></em></p>
+<p><em><span face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 3) MB --&gt; KB</span></em></p>
+<p><em>&nbsp; &nbsp; &nbsp;4) MB --&gt; GB</em></p>
+<p><em><span face="Courier New">&nbsp; &nbsp; &nbsp;5)&nbsp;</span>GB --&gt; MB</em></p>
+<p><em>&nbsp; &nbsp; &nbsp;6) GB --&gt; KB</em></p>
+<p><em>&nbsp; &nbsp; &nbsp;7) Exit</em></p>
+<p><em><span face="Courier New">Please enter an integer from 1 to 7 &gt;</span>&nbsp;5</em></p>
+<p><em><span face="Courier New"><!--EndFragment--> </span></em></p>
+<p><em>Please input the quantity to be converted: 8.1</em></p>
+<p><em>8.1 GB is 8294.4MB</em></p>
+<p><em>Do you wish to run again (y/n)?: n</em></p>
+<p><em>Goodbye!</em></p>
+<h3><span size="4">Submission:&nbsp;</span><span size="4">&nbsp;</span></h3>
+<blockquote>
+<p>1. Compile and run your program one last time before submitting it.&nbsp; Make sure you submit the correct file!</p>
+<p>2. The name of your program file should be: your first name, underscore, your last name, underscore, the word 'project', underscore, then the project number, followed by the .cpp extension. For example, if your name is John Smith, and you are submitting project 3, your file should be called John_Smith_Project_3.cpp.</p>
+<p>3. Login to UWF's eLearning system at&nbsp;<a href="http://elearning.uwf.edu/">http://elearning.uwf.edu/</a>&nbsp;Select our course.</p>
+<p>4. Select the Dropbox option. Then select the appropriate project folder.</p>
+<p>5. Upload your file to that folder. Check the dropbox to insure that the file was uploaded.</p>
+<p>6. Be sure to review the university policy on academic dishonesty. This is an individual project.</p>
+</blockquote>
+<h3>Important Notes:</h3>
+<p>1.&nbsp;Projects will be graded on whether they correctly solve the problem, and whether they adhere to good programming practices.</p>
+<p>2.&nbsp;Projects must be submitted by the time specified on the due date. Projects submitted after that time will get a grade of zero.</p>
+<p>3.&nbsp;Please review&nbsp;UWFs&nbsp;academic conduct policy. Note that viewing another student's solution, whether in whole or in&nbsp;part,&nbsp;is considered academic dishonesty. Also note that submitting code obtained through the Internet or other sources, whether in whole or in part, is considered academic dishonesty. All programs submitted will be reviewed for evidence of academic dishonesty, and all violations will be handled accordingly.</p>
+<p><!--EndFragment--></p>
+</body>
+</html>

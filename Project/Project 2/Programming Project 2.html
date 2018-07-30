@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p><!--StartFragment--></p>
+<p align="center"><strong>COP2334:C++ Programming</strong></p>
+<p><strong>Programming Project # 2</strong></p>
+<p><strong>Project Outcomes:</strong></p>
+<p>Write a C++ program that uses:</p>
+<ul type="disc">
+<li>selection constructs (if,&nbsp;if else, and&nbsp;switch)</li>
+<li>multiway branches</li>
+<li>looping constructs (do and while loops)</li>
+<li>Boolean expressions, bool and char types.</li>
+</ul>
+<p><strong>Prep Readings:</strong></p>
+<p>Problem Solving with C++, Chapters 2 and 3.</p>
+<p><strong>Project Requirements:</strong></p>
+<p>1.<strong>&nbsp;&nbsp;</strong>Develop a program that calculates charges for an Internet provider.&nbsp; The cost is determined by the amount of data used and the consumer plan.&nbsp; Package B (basic) is the most affordable if you plan on using &lt; 5GB (5,000MB), however, if you consume more than 5GB (5,000MB) you are charged for each additional megabyte.&nbsp; If the customer has plan P (platinum) they a flat rate for unlimited data, although the flat rate is of course a higher price than the other plans.&nbsp; Plan E (enhanced) is between the two in terms of flat fee and number of MB included.&nbsp; Plan details are listed below.&nbsp;</p>
+<p>2.&nbsp; The program will require some validity checking:</p>
+<ol type="1" start="2">
+<li style="list-style-type: none;">
+<ol type="1" start="1">
+<li>The user must enter a character corresponding to the chosen plan.&nbsp; If any character other than ('B', 'b', 'E', 'e','P', or 'p') is input then the program display an appropriate message and will prompt the user for a new plan selection. The program will continue to prompt the user until a valid plan is selected. You may assume that the user will only enter a single character.</li>
+<li>The user must input the number of megabytes used; it must be between 0 and 100,000 (inclusive). If a value outside of this range is input then the program provides an appropriate message and will request a new entry. You may assume that the user will only enter integer numbers.</li>
+</ol>
+</li>
+</ol>
+<p>&nbsp;</p>
+<ol type="1" start="3">
+<li>The plan details are as follows:</li>
+</ol>
+<p>&nbsp;</p>
+<table align="left" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="103" valign="top">
+<p align="center">Plan</p>
+</td>
+<td width="125" valign="top">
+<p align="center">Base Price</p>
+</td>
+<td width="125" valign="top">
+<p align="center">Additional Fees</p>
+</td>
+</tr>
+<tr>
+<td width="103" valign="top">
+<p align="center">B (basic)</p>
+</td>
+<td width="125" valign="top">
+<p align="center">$35</p>
+</td>
+<td width="317" valign="top">
+<p align="center">$.02 for each MB after 5 GB/5,000 MB.</p>
+</td>
+</tr>
+<tr>
+<td width="103" valign="top">
+<p align="center">E (enhanced)</p>
+</td>
+<td width="125" valign="top">
+<p align="center">$75</p>
+</td>
+<td width="317" valign="top">
+<p align="center">$.01 for each MB after 10 GB/10,000 MB</p>
+</td>
+</tr>
+<tr>
+<td width="103" valign="top">
+<p align="center">P (platinum)</p>
+</td>
+<td width="125" valign="top">
+<p align="center">$120</p>
+</td>
+<td width="317" valign="top">
+<p align="center">Unlimited data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The program will let the user know if he/she would save money by upgrading. (plan&nbsp;B to E, P to B, etc.) and will display the potential savings of switching. The factor for upgrades is as follows:</p>
+<p>&nbsp;</p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="197" valign="top">
+<p>Package</p>
+</td>
+<td width="197" valign="top">
+<p>Decision point</p>
+</td>
+<td width="197" valign="top">
+<p>Cost savings</p>
+</td>
+</tr>
+<tr>
+<td width="197" valign="top">
+<p>B</p>
+</td>
+<td width="197" valign="top">
+<p>&gt; $75</p>
+</td>
+<td width="197" valign="top">
+<p>cost of B&nbsp; &nbsp; &nbsp;cost of E.</p>
+</td>
+</tr>
+<tr>
+<td width="197" valign="top">
+<p>B</p>
+</td>
+<td width="197" valign="top">
+<p>&gt; $120</p>
+</td>
+<td width="197" valign="top">
+<p>cost of B&nbsp; &nbsp; &nbsp;&nbsp;cost of P.</p>
+</td>
+</tr>
+<tr>
+<td width="197" valign="top">
+<p>E</p>
+</td>
+<td width="197" valign="top">
+<p>&gt; $120</p>
+</td>
+<td width="197" valign="top">
+<p>cost of E&nbsp; &nbsp; &nbsp;&nbsp;cost of P</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>***Note that there may also be circumstances in which E and P would save money by downgrading (example = platinum customer using 1,000 MB).&nbsp; I leave this to you to work out.***&nbsp;</p>
+<p>&nbsp;<strong><span style="text-decoration: underline;">You may use a&nbsp;</span></strong><strong><span style="text-decoration: underline;">switch</span></strong><strong><span style="text-decoration: underline;">&nbsp;statement to display the plan cost and potential savings/cost of upgrading.&nbsp;</span></strong><br />&nbsp;</p>
+<p><strong>ImplementationNotes:</strong></p>
+<ul type="disc">
+<li>You should use both&nbsp;switch&nbsp;and the&nbsp;if... else&nbsp;constructs in this program. The&nbsp;switch&nbsp;construct is ideal when you are checking a single variable against a number of different discrete values (char, int). Strings and doubles are not discrete and will not work with the&nbsp;switch&nbsp;statement.&nbsp;if&nbsp;statements can be used when you have a relational operation such as equality or less than or greater than comparison, etc. &nbsp;Be careful when using a long chain of&nbsp;if... else&nbsp;constructs because it can become confusing.</li>
+<li>It is always good practice to develop programs in small functional steps, testing as you go (incremental development.&nbsp; Here is a possible strategy for this assignment:
+<ol type="1" start="1">
+<li>Write the code that prompts the user to enter a plan and data in MBs. &nbsp;Display this information back to the user (no calculation necessary).</li>
+<li>Add the calculation to to show what it will cost depending on which plan is chosen and the amount of data. No validation or comparison needed yet.</li>
+<li>Add code that will test which plan is selected and compare costs, then display a message to the user informing how much the upgrade/downgrade will save them.</li>
+<li>Add the validation/error handling (looping).</li>
+</ol>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>SampleRuns:</strong></p>
+<p><span style="text-decoration: underline;">Run1:</span></p>
+<p>Which plan does the customer use (B, E, or P)?&nbsp;B<br />How many MB did the customer use last month?&nbsp;4000<br />The charges are: $35.00</p>
+<p>&nbsp;</p>
+<p><span style="text-decoration: underline;">Run 2:</span></p>
+<p>&nbsp;</p>
+<p>Which plan does the customer use (B, E, or P)?&nbsp;B<br />How many MB did the customer use last month?&nbsp;7500<br />The charges are: $85.00<br />By switching to plan E you would save $10.00</p>
+<p>&nbsp;</p>
+<p>***********************************************************<br /><span style="text-decoration: underline;">Run 3:</span></p>
+<p>&nbsp;</p>
+<p>Which plan does the customer use (B, E, or P)?&nbsp;E<br />How many MB did the customer use last month?&nbsp;15000<br />The charges are: $125.00<br />By switching to plan P you would save $5.00<br />**********************************************************</p>
+<p><span style="text-decoration: underline;">Run4:</span></p>
+<p>&nbsp;</p>
+<p>Which plan does the customer use (E, B, or P)?&nbsp;f<br />Enter only E, B, or P for the plan.</p>
+<p><br />Which plan does the customer use (E, B, or P)?&nbsp;5<br />Enter only E, B, or P for the plan.</p>
+<p><br />Which plan does the customer use (E, B, or P)? E<br />How many MB did the customer use last month?&nbsp;-12<br />Enter a number from 0 through 10000 for MB used.</p>
+<p><br />How many MB did the customer use last month?&nbsp;900000<br />Enter a number from 0 through 100000 for MB used.</p>
+<p><br />How many MB did the customer use last month?&nbsp;5<br />The charges are $35</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Submission Requirements:</strong></p>
+<p>Follow the submission requirements posted on elearning.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>ImportantNotes:</strong></p>
+<ul type="disc">
+<li>Projects will be graded on whether they correctly solve the problem, and whether they adhere to good programming practices.</li>
+<li>Projects must be submitted by the time specified on the due date. Projects submitted after that time will get a grade of zero.</li>
+<li>Please review UWF s academic conduct policy as well as this class' policy (contained in the syllabus). Note that viewing another student's solution, whether in whole or in part, is considered academic dishonesty. Also note that submitting code obtained through the Internet or other sources, whether in whole or in part, is considered academic dishonesty. All programs submitted will be reviewed for evidence of academic dishonesty, and all violations will be handled accordingly.</li>
+</ul>
+<p><!--EndFragment--> </p>
+</body>
+</html>
